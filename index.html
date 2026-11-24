@@ -6,8 +6,8 @@
 <title>Big Two</title>
 <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
 <style>
-:root{--w:64px;--h:92px;--gold:#e8c66a;--ink:#1b1b1f;--red:#c8202f}
-@media(max-width:640px){:root{--w:46px;--h:66px}}
+:root{--badge:12px;--w:64px;--h:92px;--gold:#e8c66a;--ink:#1b1b1f;--red:#c8202f}
+@media(max-width:640px){:root{--w:46px;--h:66px;--badge:76px}}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;height:100%;font-family:Georgia,"Songti SC","Noto Serif SC",serif;color:#f6f1e0;background:#0b3d24;overflow:hidden}
 body{background:radial-gradient(ellipse at 50% 40%,#17804d 0%,#0e5a34 55%,#073320 100%)}
@@ -26,7 +26,7 @@ input{font:inherit;padding:.65em .9em;border-radius:10px;border:2px solid #0006;
 .code{font-size:3rem;letter-spacing:.3em;text-align:center;color:var(--gold);font-weight:700;margin:6px 0}
 .plist div{padding:7px 12px;background:#0004;border-radius:8px;margin:5px 0;display:flex;justify-content:space-between}
 .err{color:#ff9a8a;min-height:1.3em}
-#table{position:fixed;inset:0;display:none;flex-direction:column;padding:env(safe-area-inset-top) 8px env(safe-area-inset-bottom)}
+#table{position:fixed;inset:0;display:none;flex-direction:column;padding:env(safe-area-inset-top) 8px calc(env(safe-area-inset-bottom) + var(--badge))}
 #table.on{display:flex}
 #top{display:flex;justify-content:center;padding-top:8px;min-height:60px}
 #mid{flex:1;display:flex;align-items:center;justify-content:space-between;min-height:0}
